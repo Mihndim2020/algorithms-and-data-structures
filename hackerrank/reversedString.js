@@ -9,3 +9,11 @@ const reverseString = (str) => {
       toReverse += str[i];
     }
   }
+  let reversed = toReverse.split("").reverse().join("");
+
+  for (let [key, value] of Object.entries(nonAlpha)) {
+    console.log(key, value);
+    reversed.slice(0, parseInt(key)) + value + reversed.slice(parseInt(key));
+  }
+  return reversed;
+};
