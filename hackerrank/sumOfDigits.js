@@ -1,6 +1,9 @@
 // Given an integer, , find the smallest integer  such that  is divisible by  (i.e.,  is a factor of ) and satisfies the following properties must not contain zeroes in its decimal representation. The sum of 's digits must be greater than or equal to the product of 's digits. Given , find  and print the number of digits in 's decimal representation. Input Format A single integer denoting . Constraints is not divisible by .
 
 function divisibleNumbers(n) {
+  if (n % 10 === 0) {
+    return undefined;
+  }
   let m = n;
   let i = 1;
 
@@ -21,5 +24,8 @@ function divisibleNumbers(n) {
     m *= i;
     i += 1;
   }
+  console.log(m);
   return m.toString().length;
 }
+
+console.log(divisibleNumbers(10));
