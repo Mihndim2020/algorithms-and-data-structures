@@ -7,3 +7,5 @@ const calcFactorial = (n) => {
 };
 
 console.log(calcFactorial(5));
+console.log(calcFactorial(6));
+console.log(calcFactorial(4));
