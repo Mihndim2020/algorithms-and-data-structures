@@ -16,3 +16,5 @@ const counter = privateCounter();
 console.log(counter.getValue());
 counter.increment();
 console.log(counter.getValue());
+
+console.dir(counter.getValue);
