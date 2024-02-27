@@ -16,8 +16,6 @@ const users = [
   },
 ];
 
-const checkObjectProp = (name) => {
-  return users.some((user) => user.name === name);
-};
+const checkObjectProp = (name, arr) => arr.some((user) => user.name === name);
 
-console.log(checkObjectProp("Jack"));
+console.log(checkObjectProp("Jack", users));
