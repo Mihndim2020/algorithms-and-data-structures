@@ -1,5 +1,5 @@
 const removeDuplicates = (arr) => {
-  return [...new Set(arr)];
+  return [...new Set(arr)]; // spread converts set backt to an array...
 };
 
 const myArry = [1, 1, 2, 3, 4, 4, 5, 5];
