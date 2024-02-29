@@ -13,7 +13,6 @@ const findAndCountMinValue = (arr) => {
 
 const countMine = (arr) => {
   let min = Math.min(...arr);
-
   let minArray = arr.filter((elem) => elem === min);
   return minArray.length;
 };
