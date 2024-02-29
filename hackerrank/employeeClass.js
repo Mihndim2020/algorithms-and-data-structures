@@ -23,3 +23,8 @@ class Employee {
     return this.salary;
   }
 }
+
+const employee = new Employee("1", "Jay");
+employee.setSalary(95000);
+
+console.log(employee);
