@@ -38,7 +38,7 @@ const employee = new Employee("1", "Jay");
 employee.setSalary(95000);
 
 const manager = new Manager("2", "Mih");
-manager.setDepartment = "Software Engineering";
+manager.setDepartment("Software Engineering");
 
 console.log("Manager: ", manager);
 
