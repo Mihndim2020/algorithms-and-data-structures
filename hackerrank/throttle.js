@@ -17,7 +17,7 @@ const throttle = (funct, timeout = 200) => {
 };
 
 const precessChange = throttle(saveInput, 3000);
-
+precessChange("Mih");
 setTimeout(() => {
   precessChange("Mih");
 }, 1000);
