@@ -11,15 +11,19 @@ const getStatus = () => {
 };
 
 const getMappedUsers = async () => {
-  const users = await getUsers();
-  const userStatuses = await getStatus();
-  const mappedUsers = users.map((user) => {
-    const isActive = userStatuses.find((userStatus) => {
-      userStatus.id === user.id;
-    }).isActive;
-    return { ...user, isActive };
-  });
-  console.log("MappedUsers", mappedUsers);
+  try {
+    const users = await getUsers();
+    const userStatuses = await getStatus();
+    const mappedUsers = users.map((user) => {
+      const isActive = userStatuses.find((userStatus) => {
+        userStatus.id === user.id;
+      }).isActive;
+      return { ...user, isActive };
+    });
+    console.log("MappedUsers", mappedUsers);
+  } catch (error) {
+    console.log("error", error);
+  }
 };
 
 getMappedUsers();
