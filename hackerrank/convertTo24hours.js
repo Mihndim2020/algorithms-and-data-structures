@@ -1,9 +1,10 @@
 const convertTo24hours = (time) => {
   let hours = time.split(":")[0].padStart(2, "0");
   let minutes = time.split(":")[1].slice(0, -2).padStart(2, "0");
-  let amPm = time.split(":")[1].slice(-2);
+  // let amPm = time.split(":")[1].slice(-2);
 
-  return amPm === "AM"
+  //return amPm === "AM"
+  return time.endsWith("AM")
     ? `${(hours % 12).toString().padStart(2, "0")}:${minutes}`
     : `${(hours % 12) + 12}:${minutes}`;
 };
