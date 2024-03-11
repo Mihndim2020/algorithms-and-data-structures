@@ -1,5 +1,5 @@
 const replaceParamsUrl = (initialUrl, arr) => {
-  console.log(initialUrl.split(":"));
+  console.log(initialUrl.split("/"));
   console.log(arr);
 };
 
